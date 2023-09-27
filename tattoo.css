@@ -1,0 +1,937 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+     background-color: #000;
+   
+   
+
+   
+
+
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -40px;
+    
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgba(0,0,0,0.9);
+}
+
+#chk1{
+    display: none;
+}
+
+i{
+    color: white;
+    
+}
+
+i:hover{
+    color: red;
+}
+
+header .logo{
+    flex: 1;
+    color: white;
+    text-transform: uppercase;
+    font-family: "jost";
+    
+}
+
+header .logo:hover{
+    color: red;
+}
+
+header ul{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+ ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ul li a:hover{
+    border-bottom: 2px solid wheat;
+    color: red;
+}
+
+header .menu{
+    font-size: 2.5em;
+    display: none;
+}
+
+@media  (max-width: 1000px) {
+    header ul{
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+
+    header .menu{
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+
+    #chk1:checked ~ ul{
+        right: 0;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    
+    header .logo{
+        font-size: 10px;
+        margin-left: 8px;
+
+    }
+
+    header ul{
+        width: 100%;
+    }
+
+    header .menu{
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+    
+    
+}
+@media (max-width: 700px) {
+   
+   
+
+    header .menu{
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+
+    
+    
+
+    
+}
+
+
+/* NAVBAR CSS ENDS HERE */
+
+/* CSS FOR SHOP STARTS HERE */
+
+/* .theshop{
+    border: 2px white solid;
+    padding: 2em;
+    text-align: center;
+    color: white;
+    background: transparent;
+    font-size: 36px;
+    margin-top: 6px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    margin-bottom: 8px;
+
+}
+
+.theshop h1:hover{
+    color: red;
+}
+
+
+.imgcard{
+ 
+    background: url(img/WhatsApp\ Image\ 2023-09-26\ at\ 06.04.35.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+
+    border-radius: 12px;
+    width: 100%;
+
+    margin: auto;
+    
+
+}
+
+.imgcard img{
+    margin-top: 100px;
+    width: 65%;
+}
+@media (max-width: 610px) {
+    .imgcard img{
+        width: 50%;
+    }
+    
+}
+.imgcard h1{
+    color: white;
+    font-size: 36px;
+    text-align: left;
+
+}
+.imgcard h2{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+.imgcard h3{
+    color: white;
+    font-size: 18px;
+    text-align: left;
+}
+
+.imgcard p{
+    color: white;
+    font-size: 16px;
+    text-align: left;
+}
+
+.imgcard button{
+    background-color: white;
+    transition: all 0.5s linear;
+  
+    width: 25%;
+    border-radius: 75px 75px;
+    text-decoration: none;
+    padding: 2%;
+    margin-top: 4px;
+
+}
+.imgcard button:hover{
+    background-color: #000;
+    transition: all 0.5s linear;
+}
+
+.imgcard button a{
+    text-decoration: none;
+    color: black;
+    
+    
+    
+}
+
+.imgcard button a:hover{
+    color: white;
+} 
+ */
+
+
+
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sedgwick Ave Display', cursive;
+    background-color: #000; /* Set a background color for the whole page */
+}
+
+.theshop {
+    border: 2px solid white; /* Changed border color to white */
+    padding: 2em;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Added a transparent background with some opacity */
+    font-size: 36px;
+    margin-top: 20px; /* Increased top margin for better spacing */
+    font-family: 'Sedgwick Ave Display', cursive;
+    border-radius: 12px;
+}
+
+.theshop h1:hover {
+    color: red;
+}
+
+.imgcard {
+    background:black;
+    background-repeat: no-repeat;
+    background-size: cover; /* Changed background size to cover for better display */
+    border-radius: 12px;
+    width: 100%;
+    margin: auto;
+    padding: 20px; /* Added padding for better spacing */
+    text-align: center; /* Center-align the content */
+    margin-top: 20px; /* Increased top margin for better spacing */
+}
+
+.imgcard img {
+    width: 100%; /* Make the image responsive */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    border-radius: 12px;
+}
+
+.imgcard h1, .imgcard h2, .imgcard h3, .imgcard p {
+    color: white;
+    text-align: center; /* Center-align the text */
+    margin: 10px 0; /* Added some margin for spacing */
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width:430px) {
+
+    .imgcard h1, .imgcard h2, .imgcard h3, .imgcard p{
+        font-size: 25px;
+    }
+    
+}
+.imgcard button {
+    background-color: white;
+    color: #000;
+    padding: 3%;
+    width: 28%;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    display: inline-block;
+   
+    border-radius: 25px; /* Adjusted border-radius for a rounded button */
+    text-decoration: none;
+    margin-top: 10px; /* Increased top margin for spacing */
+}
+
+.imgcard button a{
+    text-decoration: none;
+    padding: 2%;
+    color: black;
+
+}
+
+@media (max-width:700px) {
+    .imgcard button a{
+        width: 25%;
+    }
+    
+}
+
+.imgcard button a:hover{
+    color: white;
+}
+
+.imgcard button:hover {
+    background-color: #000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The shop CSS ENDS HERE */
+
+.ad{
+    background-color: #000;
+}
+
+
+
+.address h1{
+    /* border: 1px solid yellow; */
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    background-color: #000;
+}
+
+.address iframe{
+  width: 50%;
+  margin: auto;
+  margin-left: 25%;
+  height: 80vh;
+  background-color: #000;
+  color: #000;
+}
+
+
+
+
+/* CSS FOR ADDRESS ENDS HERE */
+
+
+
+  .art{
+    background-color: #000;
+  }
+
+
+
+
+
+
+ .artists{
+    border: 2px solid red;
+    background-color: black;
+    margin-top: 2%;
+
+    width: 49%;
+    margin: auto;
+    border-radius: 8px;
+    margin-top: 2%;
+
+}
+
+@media (max-width:650px) {
+    .artists{
+        width: 100%;
+    }
+    .art1{
+        width: 100%;
+    }
+    .art2{
+        width: 100%;
+    }
+}
+
+
+.artists h1{
+    text-align: center;
+}
+
+.art1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    border-bottom: 3px solid white;
+    
+    
+}
+.art1 img{
+
+    width: 35%;
+  margin: auto;
+  height: 40vh;
+  border-radius: 20px 20px;
+}
+
+.art1 img:hover{
+    transform: scale(1.3,1.3);
+}
+.art1 p{
+    width: 40%;
+    margin: auto;
+    color: white;
+}
+.art1 p a{
+    text-decoration: none;
+    color: tomato;
+}
+
+.art1 h2{
+    border: 2px solid black;
+    color: white;
+    
+    width: 25%;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 4px;
+}
+
+.art1 button{
+    background-color: black;
+    color: white;
+    padding: 2%;
+    border-radius: 4px;
+    width: 25%;
+    margin: auto;
+    margin-top: 1%;
+
+}
+.art1 button:hover{
+    background-color: white;
+    transition: all 0.5s linear;
+}
+
+.art1 button a{
+    text-decoration: none;
+    color: tomato;
+}
+
+
+.art2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-top: 10%;
+    border-bottom: 3px solid white;
+    
+    
+}
+.art2 img{
+
+    width: 42%;
+  margin: auto;
+  height: 50vh;
+  border-radius: 20px 20px;
+}
+
+@media (max-width:700px) {
+
+    .art2 img{
+        width: 40%;
+        height: 35vh;
+    }
+
+
+    .art1 img{
+        width: 40%;
+        height: 35vh;
+
+    }
+
+    
+}
+
+
+
+@media (max-width:450px) {
+
+    .art2 img{
+        width: 25%;
+        height: 20vh;
+    }
+
+
+    .art1 img{
+        width: 25%;
+        height: 18vh;
+
+    }
+
+    
+}
+
+.art2 img:hover{
+    transform: scale(1.3,1.3);
+}
+.art2 p{
+    width: 40%;
+    margin: auto;
+    color: white;
+}
+.art2 p a{
+    text-decoration: none;
+    color: tomato;
+}
+
+.art2 h2{
+    border: 2px solid black;
+    color: white;
+    width: 25%;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 4px;
+}
+
+.art2 button{
+    background-color: black;
+    color: white;
+    padding: 2%;
+    border-radius: 4px;
+    width: 25%;
+    margin: auto;
+    margin-top: 1%;
+
+}
+.art2 button:hover{
+    background-color: white;
+    transition: all 0.5s linear;
+}
+
+.art2 button a{
+    text-decoration: none;
+    color: tomato;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS FOR ARTISTS ENDS HERE */
+
+
+.newsletter{
+    border: solid 1px black;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2%;
+    background: url(img/WhatsApp\ Image\ 2023-09-26\ at\ 06.04.35.jpg);
+    background-size: contain;
+    height: 30vh;
+}
+
+.newsletter h1{
+    color: red;
+    background-color: #000;
+}
+.newsletter button{
+    background-color: #000;
+    color: red;
+    padding: 2%;
+    width: 30%;
+    border-radius: 75px 75px;
+    margin-top: 1%;
+}
+
+.newsletter button a{
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+    margin-top: 4%;
+}
+
+
+
+
+
+.newsletter button:hover{
+    background-color: white;
+}
+
+
+/* CSS FOR NEWSLETTER ENDS HERE */
+
+
+
+.site-footer
+{
+  background: url(img/WhatsApp\ Image\ 2023-09-26\ at\ 06.04.35.jpg);
+  background-size: contain;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:white
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d;
+  color: white;
+  
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  /* background-color:#eceeef; */
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+
+/* CSS FOR FOOTER ENDS HERE */
+
+
+
+.privacy{
+    background: url(img/WhatsApp\ Image\ 2023-09-26\ at\ 06.04.35.jpg);
+    color: gray;
+    margin: 2%;
+    margin-top: 12%;
+    z-index: 120;
+    display: block;
+}
+
+
+/* CSS FOR PRIVACY AND POLICY ENDS */
+
+
+.aftercare{
+    border: 4px white solid;
+    color: burlywood;
+    background: rgba(0,0,0,0.9);
+    background-size: auto;
+    line-height: 65px;
+    font-size: 19px;
+    margin-top: 3%;
+    
+}
+
+@media (max-width: 700px) {
+    .aftercare{
+        margin-top: 13%;
+    }
+    
+}
+
+/* CSS FOR AFTERCARE */
+
+
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-card {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image img {
+     max-width: 100%; 
+    
+   
+    border-radius: 50%;
+    margin-bottom: 20px;
+    
+}
+
+.profile-details h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.project-images img {
+    width: 27%;
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+
+/* CSS FOR FAQS */
+
+.FAQS{
+    color: white;
+    background: black;
+    line-height: 65px;
+    font-size: 19px;
+}
